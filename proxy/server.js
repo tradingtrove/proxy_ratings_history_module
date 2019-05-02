@@ -44,6 +44,7 @@ app.get('/api/stocks/:stockID/ratings', (req, res) => {
       })
       .catch(err => console.log('PROXY GET ERROR: ', err));
     }
+  });
 });
 
 // GET Purchase History from Redis, if not, from request from server and place in cache in Redis
@@ -62,6 +63,7 @@ app.get('/api/stocks/:stockID/history', (req, res) => {
       })
       .catch(err => console.log('PROXY GET ERROR: ', err));
     }
+  });
 });
 
 app.listen(port, () => {
