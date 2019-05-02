@@ -69,7 +69,13 @@ app.get('/api/stocks/:stockID/history', (req, res) => {
 app.listen(port, () => {
   console.log(`server running at PORT: ${port}`);
 });
-
+client.on('connect', (err) => {
+  if (err) {
+    throw err;
+  } else {
+    console.log('Connected to Redis');
+  }
+});
 
 // LOCALHOST, no Redis
 
