@@ -27,6 +27,9 @@ app.get('/stocks/:stockID', (req, res) => {
 app.get('/loaderio-e6a2d072ae942af43b111087798b5b29', (req, res) => {
   res.send('loaderio-e6a2d072ae942af43b111087798b5b29');
 });
+app.get('/loaderioSymbols', (req, res) => {
+  res.sendFile('./loaderioSymbols.json');
+});
 
 // GET Stocks Ratings from Redis, if not, from request from server and place in cache in Redis
 app.get('/api/stocks/:stockID/ratings', (req, res) => {
